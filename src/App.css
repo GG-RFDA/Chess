@@ -1,8 +1,9 @@
+/* Обнуляем margin и padding для всех элементов */
 * {
   margin: 0;
   padding: 0;
 }
-
+/* Задаём свойства для класса app */
 .app {
   width: 100vw;
   height: 100vh;
@@ -10,15 +11,16 @@
   justify-content: center;
   align-items: center;
 }
-
+/* Задаём стили для доски */
 .board {
+  /* Рассчитываем ширину и высоту доски*/
   width: calc(64px * 8);
   height: calc(64px * 8);
   display: flex;
   flex-wrap: wrap;
-  border: 5px solid #1A1A1A;
+  border: 5px solid #1a1a1a;
 }
-
+/* Задаём стили для ячеек */
 .cell {
   width: 64px;
   height: 64px;
@@ -26,38 +28,40 @@
   justify-content: center;
   align-items: center;
 }
+/* Задаём стили для иконки фигуры */
 .cell img {
   width: 48px;
   height: 48px;
   position: relative;
 }
-
+/* Задаём цвета для ячеек */
 .black {
   background-color: #6e370f;
 }
 .white {
   background-color: #f1d37f;
 }
-
+/* Задаём стили для выбранной фигуры */
 .selected {
   background-color: brown;
 }
-
+/* Задаём стили для доступных ячеек */
 .available {
   height: 20px;
   width: 20px;
   border-radius: 50%;
   background-color: #008000;
 }
-
+/* Задаём стили для съеденных фигур */
 .lost {
+  /* Задаём размер для списка съеденных фигур */
   height: calc(50vh - 60px);
   padding: 30px;
   margin-left: 50px;
   background-color: #803d0d;
-  border: 3px solid #1A1A1A;
+  border: 3px solid #1a1a1a;
 }
-
+/* Задаём стили для заголовка */
 h3 {
   font-size: 25px;
   margin-bottom: 10px;
@@ -66,14 +70,14 @@ h3 {
 .parameters {
   margin-right: 40px;
 }
-
+/* Задаём стили для кнопки */
 .button {
   appearance: none;
-  background-color: #1A1A1A;
-  border: 2px solid #1A1A1A;
+  background-color: #1a1a1a;
+  border: 2px solid #1a1a1a;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -86,7 +90,6 @@ h3 {
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -99,6 +102,6 @@ h3 {
 }
 
 .button:hover {
-  color: #1A1A1A;
+  color: #1a1a1a;
   background-color: transparent;
 }
